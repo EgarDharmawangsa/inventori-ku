@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('container')
-    <div class="row justify-content-center align-items-center" style="height: 70vh">
+    <div class="row justify-content-center align-items-center" style="height: 70vh;">
         <div class="col-md-4">
             @if (session()->has('success'))
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
