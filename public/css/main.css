@@ -31,6 +31,26 @@ ul.pagination {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 
+.custom-card-body {
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-card-background {
+    position: absolute;
+    font-size: 8rem;
+    color: black;
+    opacity: 0.1;
+    z-index: 0;
+    top: 1rem;
+}
+
+.bi-box2-fill.custom-card-background {
+    font-size: 6.5rem;
+    top: 2.3rem;
+    left: 1.5rem;
+}
+
 .custom-card-count:hover {
     box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px 0px;
 }

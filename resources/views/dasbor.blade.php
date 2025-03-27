@@ -5,7 +5,8 @@
     <div class="row">
         <div class="col-md-4 mb-3">
             <div class="card bg-primary custom-card-count">
-                <div class="card-body">
+                <div class="card-body custom-card-body">
+                    <i class="bi bi-people-fill custom-card-background"></i>
                     <div class="card-title">Jumlah Admin</div>
                     <h1 class="text-end">{{ $jumlah_admin }}</h1>
                     <hr class="mt-0 mb-1">
@@ -18,7 +19,8 @@
         </div>
         <div class="col-md-4 mb-3">
             <div class="card bg-danger custom-card-count">
-                <div class="card-body">
+                <div class="card-body custom-card-body">
+                    <i class="bi bi-people-fill custom-card-background"></i>
                     <div class="card-title">Jumlah Non-Admin</div>
                     <h1 class="text-end">{{ $jumlah_nonadmin }}</h1>
                     <hr class="mt-0 mb-1">
@@ -31,7 +33,8 @@
         </div>
         <div class="col-md-4 mb-3">
             <div class="card bg-success custom-card-count">
-                <div class="card-body">
+                <div class="card-body custom-card-body">
+                    <i class="bi bi-box2-fill custom-card-background"></i>
                     <div class="card-title">Jumlah Barang</div>
                     <h1 class="text-end">{{ $jumlah_barang }}</h1>
                     <hr class="mt-0 mb-1">
