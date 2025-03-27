@@ -79,27 +79,41 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, User $petugas)
     {
         $rules = [
-            'name' => 'required|max:255',
-            'password' => 'required|min:5|max:255',
+            'namePetugas' => 'required|max:255',
+            'passwordPetugas' => 'required|min:5|max:255',
             'role_id' => 'required'
         ];
 
-        if ($request->username != $user->username) {
-            $rules['username'] = 'required|min:5|max:255|unique:users';
+        if ($request->usernamePetugas != $petugas->username) {
+            $rules['usernamePetugas'] = 'required|min:5|max:255|unique:users,username';
         }
 
-        if ($request->email != $user->email) {
-            $rules['email'] = 'required|min:5|max:255|unique:users|email:dns';
+        if ($request->emailPetugas != $petugas->email) {
+            $rules['emailPetugas'] = 'required|min:5|max:255|unique:users,email|email:dns';
         }
 
         $validatedDataPetugas = $request->validate($rules);
 
-        $rules['password'] = Hash::make($rules['password']);
+        if (!isset($validatedDataPetugas['usernamePetugas'])) {
+            $validatedDataPetugas['usernamePetugas'] = $petugas->username;
+        }
 
-        User::where('id', $user->id)->update($validatedDataPetugas);
+        if (!isset($validatedDataPetugas['emailPetugas'])) {
+            $validatedDataPetugas['emailPetugas'] = $petugas->email;
+        }
+
+        $validatedDataPetugas['passwordPetugas'] = Hash::make($validatedDataPetugas['passwordPetugas']);
+
+        User::where('id', $petugas->id)->update([
+            'name' => $validatedDataPetugas['namePetugas'],
+            'username' => $validatedDataPetugas['usernamePetugas'],
+            'email' => $validatedDataPetugas['emailPetugas'],
+            'password' => $validatedDataPetugas['passwordPetugas'],
+            'role_id' => $validatedDataPetugas['role_id']
+        ]);
 
         return redirect("/petugass")->with('successPetugas','Berhasil memperbarui data Petugas');
     }

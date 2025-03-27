@@ -48,6 +48,7 @@
                 <tr class="bg-dark text-white">
                     <th class="text-center">ID</th>
                     <th>Nama</th>
+                    <th>Username</th>
                     <th class="text-center">Role</th>
                     <th class="text-center">Aksi</th>
                 </tr>
@@ -57,6 +58,7 @@
                     <tr>
                         <td class="text-center">{{ $petugas->id }}</td>
                         <td>{{ $petugas->name }}</td>
+                        <td>{{ $petugas->username }}</td>
                         <td class="text-center">{{ $petugas->role->name }}</td>
                         <td class="text-nowrap text-center">
                             <a href="/petugass/{{ $petugas->id }}/edit" class="btn btn-primary btn-sm">

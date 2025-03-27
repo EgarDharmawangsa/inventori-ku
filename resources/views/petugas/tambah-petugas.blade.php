@@ -3,7 +3,7 @@
 @section('container')
     <h2 class="text-center mb-4">{{ $judul }}</h2>
 
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mb-5">
         <div class="col-md-8 col-lg-6">
             <form action="/petugass" method="POST" class="p-4 border rounded bg-light custom-form-ae">
                 @csrf

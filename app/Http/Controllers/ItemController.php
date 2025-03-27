@@ -81,13 +81,11 @@ class ItemController extends Controller
             'idPetugas' => 'required|integer|exists:users,id'
         ]);
 
-        $validatedDataBarang['id'] = $barang->id;
-
         Item::where('id', $barang->id)->update([
             'name' => $validatedDataBarang['namaBarang'],
             'stock' => $validatedDataBarang['stokBarang'],
             'price' => $validatedDataBarang['hargaBarang'],
-            'user_id' => $validatedDataBarang['idUser']
+            'user_id' => $validatedDataBarang['idPetugas']
         ]);
 
         return redirect("/barangs")->with('successBarang','Berhasil memperbarui data Barang');

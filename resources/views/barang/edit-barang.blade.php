@@ -4,7 +4,7 @@
     <div class="container mt-4">
         <h2 class="text-center mb-4">{{ $judul }}</h2>
 
-        <div class="row justify-content-center">
+        <div class="row justify-content-center mb-5">
             <div class="col-md-8 col-lg-6">
                 <form action="/barangs/{{ $barang->id }}" method="POST" class="p-4 border rounded bg-light custom-form-ae">
                     @csrf
@@ -51,7 +51,7 @@
                     </div>
                     <div class="d-flex justify-content-between">
                         <a href="/barangs" class="btn btn-danger">Kembali</a>
-                        <button type="submit" class="btn btn-primary">Tambah</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
                     </div>
                 </form>
             </div>
