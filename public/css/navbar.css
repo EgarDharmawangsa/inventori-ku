@@ -1,0 +1,19 @@
+.navbar {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.custom-navbar-bars-icon {
+    font-size: 1.7rem;
+    margin-right: 15px;
+}
+
+.navbar-brand {
+    margin-left: 0;
+}
+
+.version-label {
+    margin-left: 5px;
+    font-size: 13px;
+    color: #c9c9c9;
+    font-weight: lighter;
+}
