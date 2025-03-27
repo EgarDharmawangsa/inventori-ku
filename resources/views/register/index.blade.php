@@ -1,8 +1,8 @@
 @extends('layout.main')
 
 @section('container')
-    <div class="row justify-content-center align-items-center" style="height: 80vh; width: 100%">
-        <div class="col-lg-5">
+    <div class="row justify-content-center align-items-center" style="height: 75vh;">
+        <div class="col-lg-4">
             <main class="form-registration w-100 m-auto">
                 <h1 class="h3 mb-3 fw-normal text-center">Buat Akun</h1>
                 <form action="/register" method="POST">
