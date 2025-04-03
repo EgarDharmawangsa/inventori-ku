@@ -147,4 +147,8 @@ class UserController extends Controller
             "petugass_aktif" => User::where('is_online', 1)->get(),
         ]);
     }
+
+    // public function getLogUsersActivity() {
+
+    // }
 }

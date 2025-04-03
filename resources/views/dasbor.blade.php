@@ -6,7 +6,6 @@
         <div class="col-md-4 mb-3">
             <div class="card bg-primary custom-card-count">
                 <div class="card-body custom-card-body">
-                    <i class="bi bi-people-fill custom-card-background"></i>
                     <div class="card-title">Jumlah Admin</div>
                     <h1 class="text-end">{{ $jumlah_admin }}</h1>
                     <hr class="mt-0 mb-1">
@@ -20,7 +19,6 @@
         <div class="col-md-4 mb-3">
             <div class="card bg-danger custom-card-count">
                 <div class="card-body custom-card-body">
-                    <i class="bi bi-people-fill custom-card-background"></i>
                     <div class="card-title">Jumlah Non-Admin</div>
                     <h1 class="text-end">{{ $jumlah_nonadmin }}</h1>
                     <hr class="mt-0 mb-1">
@@ -34,7 +32,6 @@
         <div class="col-md-4 mb-3">
             <div class="card bg-success custom-card-count">
                 <div class="card-body custom-card-body">
-                    <i class="bi bi-box2-fill custom-card-background"></i>
                     <div class="card-title">Jumlah Barang</div>
                     <h1 class="text-end">{{ $jumlah_barang }}</h1>
                     <hr class="mt-0 mb-1">
@@ -57,6 +54,23 @@
         <div class="col-md-8 mb-3">
             <canvas id="lineChart"></canvas>
         </div>
+    </div>
+
+    <hr>
+
+    <h4 class="mb-3">Log Barang</h4>
+    </h4>
+    <div class="table-responsive mb-4">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr class="bg-info text-dark">
+                    <th class="text-center">ID</th>
+                    <th>Deskripsi</th>
+                </tr>
+            </thead>
+            <tbody id="itemLogsTable">
+            </tbody>
+        </table>
     </div>
 
     <hr>

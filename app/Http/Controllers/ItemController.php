@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Item;
 use Illuminate\Http\Request;
+use Spatie\Activitylog\Models\Activity;
 
 class ItemController extends Controller
 {
@@ -44,7 +45,7 @@ class ItemController extends Controller
             'name' => $validatedDataBarang['namaBarang'],
             'stock' => $validatedDataBarang['stokBarang'],
             'price' => $validatedDataBarang['hargaBarang'],
-            'user_id' => $validatedDataBarang['idUser']
+            'user_id' => $validatedDataBarang['idPetugas']
         ]);
 
         return redirect("/barangs")->with('successBarang','Berhasil menambahkan data Barang');
@@ -98,5 +99,13 @@ class ItemController extends Controller
     {
         Item::destroy($barang->id);
         return redirect("/barangs")->with('successBarang','Berhasil menghapus data Barang');
+    }
+
+    // Log Activity
+    public function getItemLogs()
+    {
+        return response()->json([
+            "activities" => Activity::all()
+        ]);
     }
 }
