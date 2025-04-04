@@ -15,8 +15,8 @@ a {
     padding-top: 2.5rem;
 }
 
-ul.pagination {
-    margin-left: 1rem;
+p.small.text-muted {
+    margin-right: 1rem;
 }
 
 .btn:hover {
